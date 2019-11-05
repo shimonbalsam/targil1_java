@@ -1,4 +1,7 @@
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation;
+
 import java.awt.*;
+import java.util.AbstractList;
 import java.util.ArrayList;
 
 
@@ -26,5 +29,22 @@ public class Community {
         if (count> totalTax)
             return totalTax();
         return count;
+    }
+    public ArrayList listGemach(){
+        ArrayList<Integer> listGemach = new ArrayList<>(3);
+        for (CommunityMem c: communityMembers){
+            switch (c.getVolunteerLevel()){
+                case MUSICAL:
+                    listGemach.set(0,listGemach.get(0)+1);
+                    break;
+                case PHYSICAL:
+                    listGemach.set(1,listGemach.get(1)+1);
+                    break;
+                case SPIRITUAL:
+                    listGemach.set(2,listGemach.get(2)+1);
+                    break;
+            }
+        }
+        return listGemach;
     }
 }

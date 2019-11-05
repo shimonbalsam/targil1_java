@@ -8,6 +8,7 @@ import java.util.Date;
 }
 
 
+
 abstract public class CommunityMem implements ChovotZechuyot {
     private int Id;
     private String Name;
