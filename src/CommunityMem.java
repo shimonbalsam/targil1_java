@@ -19,6 +19,18 @@ abstract public class CommunityMem implements ChovotZechuyot {
     private int Salary;
     private int UsedFromGemach;
 
+    public CommunityMem(int id, String name, String gender, String address, Date birthday, int torahHours, int workHours, int salary, int usedFromGemach) {
+        Id = id;
+        Name = name;
+        Gender = gender;
+        Address = address;
+        Birthday = birthday;
+        TorahHours = torahHours;
+        WorkHours = workHours;
+        Salary = salary;
+        UsedFromGemach = usedFromGemach;
+    }
+
 
     // *****************Setters ********************** //
 

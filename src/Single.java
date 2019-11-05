@@ -1,5 +1,13 @@
+import java.util.Date;
+
 public class Single extends CommunityMem {
     private int LearningYears;
+
+    public Single(int id, String name, String gender, String address, Date birthday, int torahHours, int workHours, int salary, int usedFromGemach, int learningYears) {
+        super(id, name, gender, address, birthday, torahHours, workHours, salary, usedFromGemach);
+        LearningYears = learningYears;
+    }
+
 
     public int getLearningYears() {
         return LearningYears;
@@ -25,6 +33,6 @@ public class Single extends CommunityMem {
 
     @Override
     public int AvgVolunteer() {
-        return 0 ;
+        return 10 - this.getTorahHours();
     }
 }
