@@ -3,8 +3,8 @@ import java.util.Date;
 public class Married extends CommunityMem {
     private int LearningYears;
 
-    public Married(int id, String name, String gender, String address, Date birthday, int torahHours, int workHours, int salary, int usedFromGemach, int learningYears) {
-        super(id, name, gender, address, birthday, torahHours, workHours, salary, usedFromGemach);
+    public Married(VolunteerLevel volunteerLevel, int id, String name, String gender, String address, Date birthday, int torahHours, int workHours, int salary, int usedFromGemach, int learningYears) {
+        super(volunteerLevel, id, name, gender, address, birthday, torahHours, workHours, salary, usedFromGemach);
         LearningYears = learningYears;
         try {
             if(torahHours+workHours<80)

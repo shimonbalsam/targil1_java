@@ -3,8 +3,8 @@ import java.util.Date;
 public class Single extends CommunityMem {
     private int LearningYears;
 
-    public Single(int id, String name, String gender, String address, Date birthday, int torahHours, int workHours, int salary, int usedFromGemach, int learningYears) {
-        super(id, name, gender, address, birthday, torahHours, workHours, salary, usedFromGemach);
+    public Single(VolunteerLevel volunteerLevel, int id, String name, String gender, String address, Date birthday, int torahHours, int workHours, int salary, int usedFromGemach, int learningYears) {
+        super(volunteerLevel, id, name, gender, address, birthday, torahHours, workHours, salary, usedFromGemach);
         LearningYears = learningYears;
     }
 

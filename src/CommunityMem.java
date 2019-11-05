@@ -3,7 +3,7 @@ import java.util.Date;
 
  enum VolunteerLevel {
     SPIRITUAL,
-    PHYSICAL,
+   PHYSICAL,
     MUSICAL
 }
 
@@ -18,8 +18,18 @@ abstract public class CommunityMem implements ChovotZechuyot {
     private int WorkHours;
     private int Salary;
     private int UsedFromGemach;
+    private VolunteerLevel VolunteerLevel;
 
-    public CommunityMem(int id, String name, String gender, String address, Date birthday, int torahHours, int workHours, int salary, int usedFromGemach) {
+    public VolunteerLevel getVolunteerLevel() {
+        return VolunteerLevel;
+    }
+
+    public void setVolunteerLevel(VolunteerLevel volunteerLevel) {
+        this.VolunteerLevel = volunteerLevel;
+    }
+
+
+    public CommunityMem(VolunteerLevel volunteerLevel, int id, String name, String gender, String address, Date birthday, int torahHours, int workHours, int salary, int usedFromGemach) {
         Id = id;
         Name = name;
         Gender = gender;
@@ -29,6 +39,7 @@ abstract public class CommunityMem implements ChovotZechuyot {
         WorkHours = workHours;
         Salary = salary;
         UsedFromGemach = usedFromGemach;
+        VolunteerLevel  = volunteerLevel;
     }
 
 
