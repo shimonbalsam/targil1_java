@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.Date;
 
 
@@ -14,7 +15,7 @@ abstract public class CommunityMem implements ChovotZechuyot {
     private String Name;
     private String Gender;
     private String Address;
-    private Date Birthday;
+    private LocalDate Birthday;
     private int TorahHours;
     private int WorkHours;
     private int Salary;
@@ -30,7 +31,7 @@ abstract public class CommunityMem implements ChovotZechuyot {
     }
 
 
-    public CommunityMem(VolunteerLevel volunteerLevel, int id, String name, String gender, String address, Date birthday, int torahHours, int workHours, int salary, int usedFromGemach) {
+    public CommunityMem(VolunteerLevel volunteerLevel, int id, String name, String gender, String address, LocalDate birthday, int torahHours, int workHours, int salary, int usedFromGemach) {
         Id = id;
         Name = name;
         Gender = gender;
@@ -41,6 +42,19 @@ abstract public class CommunityMem implements ChovotZechuyot {
         Salary = salary;
         UsedFromGemach = usedFromGemach;
         VolunteerLevel  = volunteerLevel;
+
+    }
+    public CommunityMem(int id, String name, String gender, String address, LocalDate birthday, int torahHours, int workHours, int salary, int usedFromGemach) {
+        Id = id;
+        Name = name;
+        Gender = gender;
+        Address = address;
+        Birthday = birthday;
+        TorahHours = torahHours;
+        WorkHours = workHours;
+        Salary = salary;
+        UsedFromGemach = usedFromGemach;
+
     }
 
 
@@ -62,7 +76,7 @@ abstract public class CommunityMem implements ChovotZechuyot {
         Address = address;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(LocalDate birthday) {
         Birthday = birthday;
     }
 
@@ -101,7 +115,7 @@ abstract public class CommunityMem implements ChovotZechuyot {
         return Address;
     }
 
-    public Date getBirthday() {
+    public LocalDate getBirthday() {
         return Birthday;
     }
 
@@ -122,4 +136,19 @@ abstract public class CommunityMem implements ChovotZechuyot {
     }
 
 
+    @Override
+    public String toString() {
+        return "CommunityMem{" +
+                "Id=" + Id +
+                ", Name='" + Name + '\'' +
+                ", Gender='" + Gender + '\'' +
+                ", Address='" + Address + '\'' +
+                ", Birthday=" + Birthday +
+                ", TorahHours=" + TorahHours +
+                ", WorkHours=" + WorkHours +
+                ", Salary=" + Salary +
+                ", UsedFromGemach=" + UsedFromGemach +
+                ", VolunteerLevel=" + VolunteerLevel +
+                '}';
+    }
 }

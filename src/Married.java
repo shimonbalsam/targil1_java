@@ -1,18 +1,13 @@
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Married extends CommunityMem {
     private int LearningYears;
 
-    public Married(VolunteerLevel volunteerLevel, int id, String name, String gender, String address, Date birthday, int torahHours, int workHours, int salary, int usedFromGemach, int learningYears) {
+    public Married(VolunteerLevel volunteerLevel, int id, String name, String gender, String address, LocalDate birthday, int torahHours, int workHours, int salary, int usedFromGemach, int learningYears) {
         super(volunteerLevel, id, name, gender, address, birthday, torahHours, workHours, salary, usedFromGemach);
         LearningYears = learningYears;
-        try {
-            if(torahHours+workHours<80)
-                throw new IllegalArgumentException();
-        }
-        catch (IllegalArgumentException e){
 
-        }
     }
 
     public int getLearningYears() {
